@@ -6,7 +6,15 @@ describe('UserService', () => {
 
     it('Deve adicionar um novo usuário', () => {
         const mockConsole = jest.spyOn(global.console, 'log')
-        userService.createUser('nath', 'nath@test.com');
-        expect(mockConsole).toHaveBeenCalledWith('DB atualizado', mockDb)
+        userService.createUser('helder', 'helder.daniel7@outlook.pt');
+        expect(mockConsole).toHaveBeenCalledWith('DB actualizado', mockDb)
+    });
+
+    it('Deve eliminar um usuário',()=>{
+        let pos = 1;
+        const mockConsole = jest.spyOn(global.console,'log')
+        userService.deleteUser(pos);
+        expect(mockConsole).toHaveBeenCalledWith('DB actualizado',mockDb );
+
     })
 })
