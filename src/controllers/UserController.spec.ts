@@ -8,6 +8,7 @@ describe("UserController", () => {
   const mockUserService: Partial<UserService> = {
     createUser: jest.fn(),
     deleteUser: jest.fn(),
+    getAllUsers: jest.fn(),
   };
 
   const userController = new UserController(mockUserService as UserService);
@@ -36,6 +37,19 @@ describe("UserController", () => {
     } as Request;
     const mockResponse = makeMockResponse();
     userController.deleteUser(mockRequest, mockResponse);
+    expect(mockResponse.state.status).toBe(200);
+  });
+
+  it("Deve chamar a função getAllUsers", () => {
+    const mockRequest = {
+      body: {
+        name: "helder",
+        email: "helder.daniel7@outlook.pt",
+      },
+    } as Request;
+
+    const mockResponse = makeMockResponse();
+    userController.getAllUsers(mockRequest, mockResponse);
     expect(mockResponse.state.status).toBe(200);
   });
 });

@@ -24,9 +24,9 @@ desenvolvido por [Nathally Souza](https://github.com/nathyts)
   - Verificar se a função getAllusers está sendo chamada
 
 [ ] Implementa uma validação para o campo email
-  - O usuário nâo pode ser criado caso não informe o email
+  - O usuário nâo pode ser criado caso não informe o email x
   - Escreva o teste unitário
 
-[ ] Refatorar e implementar a rota para deletar o usuário
+[x ] Refatorar e implementar a rota para deletar o usuário
   - Refatore a rota para deletar usuários
   - Escreva os testes unitários necessários
